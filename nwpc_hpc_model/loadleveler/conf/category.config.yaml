@@ -1,0 +1,81 @@
+category_list:
+  -
+    id: "llq.id"
+    display_name: "Id"
+    label: "Job Step Id"
+    record_parser_class: "DetailLabelParser"
+    record_parser_arguments:
+      - "Job Step Id"
+    value_saver_class: "StringSaver"
+    value_saver_arguments: []
+  -
+    id: "llq.owner"
+    display_name: "Owner"
+    label: "Owner"
+    record_parser_class: "DetailLabelParser"
+    record_parser_arguments:
+      - "Owner"
+    value_saver_class: "StringSaver"
+    value_saver_arguments: []
+  -
+    id: "llq.class"
+    display_name: "Class"
+    label: "Class"
+    record_parser_class: "DetailLabelParser"
+    record_parser_arguments:
+      - "Class"
+    value_saver_class: "StringSaver"
+    value_saver_arguments: []
+  -
+    id: "llq.job_script"
+    display_name: "Job Script"
+    label: "Job Script"
+    record_parser_class: "LlqJobScriptParser"
+    record_parser_arguments: []
+    value_saver_class: "StringSaver"
+    value_saver_arguments: []
+  -
+    id: "llq.err"
+    display_name: "Err"
+    label: "Err"
+    record_parser_class: "LlqFilePathParser"
+    record_parser_arguments:
+      - "Err"
+    value_saver_class: "StringSaver"
+    value_saver_arguments: []
+  -
+    id: "llq.out"
+    display_name: "Out"
+    label: "Out"
+    record_parser_class: "LlqFilePathParser"
+    record_parser_arguments:
+      - "Out"
+    value_saver_class: "StringSaver"
+    value_saver_arguments: []
+  -
+    id: "llq.status"
+    display_name: "Status"
+    label: "Status"
+    record_parser_class: "DetailLabelParser"
+    record_parser_arguments:
+      - "Status"
+    value_saver_class: "JobStatusSaver"
+    value_saver_arguments: []
+  -
+    id: "llq.queue_date"
+    display_name: "Queue Date"
+    label: "Queue Date"
+    record_parser_class: "DetailLabelParser"
+    record_parser_arguments:
+      - "Queue Date"
+    value_saver_class: "FullDateSaver"
+    value_saver_arguments: []
+  -
+    id: "llq.priority"
+    display_name: "User Priority"
+    label: "User Priority"
+    record_parser_class: "DetailLabelParser"
+    record_parser_arguments:
+      - "User Priority"
+    value_saver_class: "NumberSaver"
+    value_saver_arguments: []
