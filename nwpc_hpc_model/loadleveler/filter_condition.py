@@ -8,10 +8,25 @@ class FilterCondition(object):
 
 
 def get_property_data(job_item, property_id):
+    """
+    get property data from a job item
+    :param job_item: QueryItem or a QueryItem dict.
+    :param property_id: property_id
+    :return: property data
+    """
     result = None
-    for a_prop in job_item['props']:
-        if a_prop['id'] == property_id:
-            result = a_prop['data']
+    if isinstance(job_item, dict):
+        props = job_item['props']
+        for a_prop in props:
+            if a_prop['id'] == property_id:
+                result = a_prop['data']
+                return result
+    else:
+        props = job_item.props
+        for a_prop in props:
+            if a_prop.map['id'] == property_id:
+                result = a_prop.map['data']
+                return result
     return result
 
 

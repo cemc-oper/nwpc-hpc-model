@@ -1,6 +1,7 @@
 import datetime
 from nwpc_hpc_model.loadleveler.filter_condition import \
     FilterCondition, \
+    get_property_data, \
     PropertyFilterCondition, \
     create_equal_value_checker, \
     create_greater_value_checker, \
@@ -8,8 +9,10 @@ from nwpc_hpc_model.loadleveler.filter_condition import \
     create_in_value_checker, \
     create_value_in_checker
 
+from nwpc_hpc_model.loadleveler import QueryItem, QueryProperty
 
-def create_job(
+
+def create_job_item_dict(
         job_id="id_no",
         owner="owner",
         job_class="job_class",
@@ -39,12 +42,6 @@ def create_job(
                 "value": job_class
             },
             {
-                "id": "llq.job_script",
-                "data": "llq.job_script" + job_id,
-                "text": "llq.job_script" + job_id,
-                "value": "llq.job_script" + job_id
-            },
-            {
                 "id": "llq.status" + job_id,
                 "data": status,
                 "text": status,
@@ -72,6 +69,93 @@ def create_job(
     }
 
 
+def create_job_item(
+        job_id="id_no",
+        owner="owner",
+        job_class="job_class",
+        queue_date=datetime.datetime.now(),
+        status="R",
+        priority=100,
+        job_script="/script_path"
+):
+    job_item = QueryItem()
+
+    query_property = QueryProperty()
+    query_property.map['id'] = "llq.job_id"
+    query_property.map['text'] = job_id
+    query_property.map['value'] = job_id
+    query_property.map['data'] = job_id
+    job_item.props.append(query_property)
+
+    query_property = QueryProperty()
+    query_property.map['id'] = "llq.owner"
+    query_property.map['text'] = owner
+    query_property.map['value'] = owner
+    query_property.map['data'] = owner
+    job_item.props.append(query_property)
+
+    query_property = QueryProperty()
+    query_property.map['id'] = "llq.class"
+    query_property.map['text'] = job_class
+    query_property.map['value'] = job_class
+    query_property.map['data'] = job_class
+    job_item.props.append(query_property)
+
+    query_property = QueryProperty()
+    query_property.map['id'] = "llq.queue_date"
+    query_property.map['text'] = queue_date
+    query_property.map['value'] = queue_date
+    query_property.map['data'] = queue_date
+    job_item.props.append(query_property)
+
+    query_property = QueryProperty()
+    query_property.map['id'] = "llq.status"
+    query_property.map['text'] = status
+    query_property.map['value'] = status
+    query_property.map['data'] = status
+    job_item.props.append(query_property)
+
+    query_property = QueryProperty()
+    query_property.map['id'] = "llq.status"
+    query_property.map['text'] = str(priority)
+    query_property.map['value'] = priority
+    query_property.map['data'] = priority
+    job_item.props.append(query_property)
+
+    query_property = QueryProperty()
+    query_property.map['id'] = "llq.job_script"
+    query_property.map['text'] = job_script
+    query_property.map['value'] = job_script
+    query_property.map['data'] = job_script
+    job_item.props.append(query_property)
+
+    return job_item
+
+
+def test_get_property_data():
+    job_item = create_job_item_dict(
+        job_id="id",
+        owner="nwp_xp",
+        job_class="serial",
+        queue_date=datetime.datetime.now(),
+        priority=50,
+        job_script="/cma/g3/test.ksh"
+    )
+
+    assert get_property_data(job_item, "llq.job_script") == "/cma/g3/test.ksh"
+
+    job_item = create_job_item(
+        job_id="id",
+        owner="nwp_xp",
+        job_class="serial",
+        queue_date=datetime.datetime.now(),
+        priority=50,
+        job_script="/cma/g3/test.ksh"
+    )
+
+    assert get_property_data(job_item, "llq.job_script") == "/cma/g3/test.ksh"
+
+
 def test_condition():
     condition = FilterCondition()
     job_item = dict()
@@ -79,7 +163,7 @@ def test_condition():
 
 
 def test_equal_value_checker():
-    job_item = create_job(job_id="id", owner="nwp_xp", job_class="serial", queue_date=datetime.datetime.now())
+    job_item = create_job_item_dict(job_id="id", owner="nwp_xp", job_class="serial", queue_date=datetime.datetime.now())
 
     condition = PropertyFilterCondition(
         property_id="llq.owner",
@@ -95,7 +179,7 @@ def test_equal_value_checker():
 
 
 def test_greater_value_checker():
-    job_item = create_job(
+    job_item = create_job_item_dict(
         job_id="id",
         owner="nwp_xp",
         job_class="serial",
@@ -116,7 +200,7 @@ def test_greater_value_checker():
 
 
 def test_less_value_checker():
-    job_item = create_job(
+    job_item = create_job_item_dict(
         job_id="id",
         owner="nwp_xp",
         job_class="serial",
@@ -137,7 +221,7 @@ def test_less_value_checker():
 
 
 def test_in_value_checker():
-    job_item = create_job(
+    job_item = create_job_item_dict(
         job_id="id",
         owner="nwp_xp",
         job_class="serial",
@@ -158,7 +242,7 @@ def test_in_value_checker():
 
 
 def test_value_in_checker():
-    job_item = create_job(
+    job_item = create_job_item_dict(
         job_id="id",
         owner="nwp_xp",
         job_class="serial",

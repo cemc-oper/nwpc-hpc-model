@@ -42,31 +42,32 @@ class FullDateSaver(ValueSaver):
         item.map['value'] = value
         item.map['data'] = data
 
+
 job_state_list = [
-    { "name": "Canceled",           "abbreviation":"CA"    },
-    { "name": "Checkpointing",      "abbreviation":"CK"    },
-    { "name": "Completed",          "abbreviation":"C"     },
-    { "name": "Complete Pending",   "abbreviation":"CP"    },
-    { "name": "Deferred",           "abbreviation":"D"     },
-    { "name": "Idle",               "abbreviation":"I"     },
-    { "name": "Not Queued",         "abbreviation":"NQ"    },
-    { "name": "Not Run",            "abbreviation":"NR"    },
-    { "name": "Pending",            "abbreviation":"P"     },
-    { "name": "Preempted",          "abbreviation":"E"     },
-    { "name": "Preempt Pending",    "abbreviation":"EP"    },
-    { "name": "Rejected",           "abbreviation":"X"     },
-    { "name": "Reject Pending",     "abbreviation":"XP"    },
-    { "name": "Removed",            "abbreviation":"RM"    },
-    { "name": "Remove Pending",     "abbreviation":"RP"    },
-    { "name": "Resume Pending",     "abbreviation":"MP"    },
-    { "name": "Running",            "abbreviation":"R"     },
-    { "name": "Starting",           "abbreviation":"ST"    },
-    { "name": "System Hold",        "abbreviation":"S"     },
-    { "name": "Terminated",         "abbreviation":"TX"    },
-    { "name": "User & System Hold", "abbreviation":"HS"    },
-    { "name": "User Hold",          "abbreviation":"H"     },
-    { "name": "Vacated",            "abbreviation":"V"     },
-    { "name": "Vacate Pending",     "abbreviation":"VP"    }
+    {"name": "Canceled",           "abbreviation": "CA"},
+    {"name": "Checkpointing",      "abbreviation": "CK"},
+    {"name": "Completed",          "abbreviation": "C"},
+    {"name": "Complete Pending",   "abbreviation": "CP"},
+    {"name": "Deferred",           "abbreviation": "D"},
+    {"name": "Idle",               "abbreviation": "I"},
+    {"name": "Not Queued",         "abbreviation": "NQ"},
+    {"name": "Not Run",            "abbreviation": "NR"},
+    {"name": "Pending",            "abbreviation": "P"},
+    {"name": "Preempted",          "abbreviation": "E"},
+    {"name": "Preempt Pending",    "abbreviation": "EP"},
+    {"name": "Rejected",           "abbreviation": "X"},
+    {"name": "Reject Pending",     "abbreviation": "XP"},
+    {"name": "Removed",            "abbreviation": "RM"},
+    {"name": "Remove Pending",     "abbreviation": "RP"},
+    {"name": "Resume Pending",     "abbreviation": "MP"},
+    {"name": "Running",            "abbreviation": "R"},
+    {"name": "Starting",           "abbreviation": "ST"},
+    {"name": "System Hold",        "abbreviation": "S"},
+    {"name": "Terminated",         "abbreviation": "TX"},
+    {"name": "User & System Hold", "abbreviation": "HS"},
+    {"name": "User Hold",          "abbreviation": "H"},
+    {"name": "Vacated",            "abbreviation": "V"},
+    {"name": "Vacate Pending",     "abbreviation": "VP"}
 ]
 
 
