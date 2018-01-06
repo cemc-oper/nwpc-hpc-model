@@ -67,3 +67,12 @@ def create_in_value_checker(expect_values):
         else:
             return False
     return value_checker
+
+
+def create_value_in_checker(expect_value):
+    def value_checker(value):
+        if expect_value in value:
+            return True
+        else:
+            return False
+    return value_checker

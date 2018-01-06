@@ -5,7 +5,8 @@ from nwpc_hpc_model.loadleveler.filter_condition import \
     create_equal_value_checker, \
     create_greater_value_checker, \
     create_less_value_checker, \
-    create_in_value_checker
+    create_in_value_checker, \
+    create_value_in_checker
 
 
 def create_job(
@@ -14,7 +15,8 @@ def create_job(
         job_class="job_class",
         queue_date=datetime.datetime.now(),
         status="R",
-        priority=100
+        priority=100,
+        job_script="/script_path"
 ):
     return {
         "props": [
@@ -59,7 +61,13 @@ def create_job(
                 "data": priority,
                 "text": priority,
                 "value": priority
-            }
+            },
+            {
+                "id": "llq.job_script",
+                "data": job_script,
+                "text": job_script,
+                "value": job_script
+            },
         ]
     }
 
@@ -145,5 +153,28 @@ def test_in_value_checker():
     condition = PropertyFilterCondition(
         property_id="llq.owner",
         data_checker=create_in_value_checker(("unknown",))
+    )
+    assert not condition.is_fit(job_item)
+
+
+def test_value_in_checker():
+    job_item = create_job(
+        job_id="id",
+        owner="nwp_xp",
+        job_class="serial",
+        queue_date=datetime.datetime.now(),
+        priority=50,
+        job_script="/cma/g3/test.ksh"
+    )
+    condition = PropertyFilterCondition(
+        property_id="llq.job_script",
+        data_checker=create_value_in_checker("g3")
+    )
+
+    assert condition.is_fit(job_item)
+
+    condition = PropertyFilterCondition(
+        property_id="llq.job_script",
+        data_checker=create_value_in_checker("g2")
     )
     assert not condition.is_fit(job_item)
