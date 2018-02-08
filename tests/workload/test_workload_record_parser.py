@@ -50,15 +50,14 @@ class TestRecordParser(object):
         ]
 
         def check_parser(case):
-            line = case["line"]
+            case_line = case["line"]
             value = case["value"]
             name = case["name"]
             index = case["record_parser"]["args"]["index"]
 
             parser = record_parser.TokenRecordParser(index)
-            parser_value = parser.parse(line)
+            parser_value = parser.parse(case_line)
             assert(parser_value == value)
-            print("Test passed:", name)
 
         for test_case in test_cases:
             check_parser(test_case)

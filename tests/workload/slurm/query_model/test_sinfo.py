@@ -1,7 +1,7 @@
 # coding: utf-8
 from pathlib import Path
 
-from nwpc_hpc_model.slurm import SlurmQueryModel, SlurmQueryCategoryList
+from nwpc_hpc_model.workload.slurm import SlurmQueryModel, SlurmQueryCategoryList
 from nwpc_hpc_model.workload import QueryCategory, record_parser, value_saver
 
 

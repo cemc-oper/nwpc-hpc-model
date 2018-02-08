@@ -1,6 +1,7 @@
 # nwpc-hpc-model
 
 [![Build Status](https://travis-ci.org/perillaroc/nwpc-hpc-model.svg?branch=master)](https://travis-ci.org/perillaroc/nwpc-hpc-model)
+[![codecov](https://codecov.io/gh/perillaroc/nwpc-hpc-model/branch/master/graph/badge.svg)](https://codecov.io/gh/perillaroc/nwpc-hpc-model)
 
 A collection of models for HPC used in NWPC. Including model for:
 
