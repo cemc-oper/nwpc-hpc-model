@@ -1,26 +1,14 @@
-import sys
-import os
+# coding=utf-8
+from nwpc_hpc_model.workload_scheme import QueryModel
+from nwpc_hpc_model.loadleveler import QueryItem
 
-from nwpc_hpc_model.loadleveler.query_item import QueryItem
 
-
-class QueryModel(object):
+class LoadLevelerQueryModel(QueryModel):
     def __init__(self):
-        self.items = list()
-        self.category_list = None
+        QueryModel.__init__(self)
 
-    def to_dict(self):
-        result = dict()
-        result['items'] = []
-        for item in self.items:
-            result['items'].append(item.to_dict())
-        return result
-
-    def set_category_list(self, category_list):
-        self.category_list = category_list
-
-    @staticmethod
-    def build_from_category_list(record, category_list):
+    @classmethod
+    def build_from_category_list(cls, record, category_list):
         lines = record
         model = QueryModel()
 

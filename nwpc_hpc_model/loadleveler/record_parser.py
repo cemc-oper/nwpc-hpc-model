@@ -1,13 +1,6 @@
 # coding=utf-8
 import pathlib
-
-
-class RecordParser(object):
-    def __init__(self):
-        pass
-
-    def parse(self, record):
-        pass
+from nwpc_hpc_model.workload_scheme.record_parser import RecordParser, TableRecordParser
 
 
 class DetailLabelParser(RecordParser):
@@ -76,13 +69,3 @@ class LlqJobScriptParser(RecordParser):
         file_path_parser = LlqFilePathParser(script_label)
         value = file_path_parser.parse(record)
         return value
-
-
-class TableRecordParser(RecordParser):
-    def __init__(self, begin_pos, end_pos):
-        RecordParser.__init__(self)
-        self.begin_pos = int(begin_pos)
-        self.end_pos = int(end_pos)
-
-    def parse(self, record):
-        return record[self.begin_pos:self.end_pos].strip()

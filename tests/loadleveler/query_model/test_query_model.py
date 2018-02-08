@@ -41,7 +41,7 @@ class TestQueryModel(unittest.TestCase):
         )
         with open(nwp_output) as nwp_output_file:
             lines = nwp_output_file.readlines()
-            model = query_model.QueryModel.build_from_category_list(lines, category_list)
+            model = query_model.LoadLevelerQueryModel.build_from_category_list(lines, category_list)
             model_dict = model.to_dict()
             self.assertTrue('items' in model_dict)
             self.assertEqual(len(model_dict['items']), 3)
@@ -52,7 +52,7 @@ class TestQueryModel(unittest.TestCase):
         category_list = test_case['category_list']
         records = test_case['records']
 
-        model = query_model.QueryModel.build_from_category_list(record, category_list)
+        model = query_model.LoadLevelerQueryModel.build_from_category_list(record, category_list)
 
         for record in records:
             index = record['index']

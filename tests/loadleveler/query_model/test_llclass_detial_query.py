@@ -17,7 +17,7 @@ class TestLlclassDetailQueryModel(unittest.TestCase):
         category_list = test_case['category_list']
         records = test_case['records']
 
-        model = query_model.QueryModel.build_from_category_list(record, category_list)
+        model = query_model.LoadLevelerQueryModel.build_from_category_list(record, category_list)
 
         for record in records:
             index = record['index']
