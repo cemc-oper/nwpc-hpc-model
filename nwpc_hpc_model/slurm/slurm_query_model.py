@@ -1,5 +1,5 @@
-# coding: utf-8
-from nwpc_hpc_model.workload_scheme import QueryModel, QueryItem
+# coding=utf-8
+from nwpc_hpc_model.workload import QueryModel, QueryItem
 
 
 class SlurmQueryModel(QueryModel):
@@ -9,7 +9,7 @@ class SlurmQueryModel(QueryModel):
     @classmethod
     def build_from_table_category_list(cls, record, category_list):
         title_line = record[0]
-        category_list.update_index_from_title_line(title_line)
+        category_list.update_index_for_table_query(title_line)
 
         lines = record[1:]
         model = SlurmQueryModel()

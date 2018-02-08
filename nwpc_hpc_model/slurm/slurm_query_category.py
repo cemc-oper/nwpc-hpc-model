@@ -1,10 +1,10 @@
 # coding: utf-8
-from nwpc_hpc_model.workload_scheme import QueryCategory, QueryCategoryList
+from nwpc_hpc_model.workload import QueryCategoryList
 
 
 class SlurmQueryCategoryList(QueryCategoryList):
 
-    def update_index_from_title_line(self, title_line):
+    def update_index_for_table_query(self, title_line):
         tokens = title_line.split()
         for index in range(0, len(tokens)):
             label = tokens[index]

@@ -1,6 +1,6 @@
 # coding=utf-8
 
-from nwpc_hpc_model.workload_scheme import record_parser
+from nwpc_hpc_model.workload import record_parser
 
 
 class TestRecordParser(object):

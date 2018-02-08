@@ -2,7 +2,7 @@
 from pathlib import Path
 
 from nwpc_hpc_model.slurm import SlurmQueryModel, SlurmQueryCategoryList
-from nwpc_hpc_model.workload_scheme import QueryCategory, record_parser, value_saver
+from nwpc_hpc_model.workload import QueryCategory, record_parser, value_saver
 
 
 class TestSinfoQueryInfo(object):

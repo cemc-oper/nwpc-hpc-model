@@ -10,7 +10,7 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
 setup(
     name='nwpc-hpc-model',
 
-    version='0.1.0',
+    version='0.2.0',
 
     description='A collection of models for HPC used in NWPC.',
     long_description=long_description,
