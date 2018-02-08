@@ -19,8 +19,8 @@ class QueryModel(object):
     def set_category_list(self, category_list):
         self.category_list = category_list
 
-    @staticmethod
-    def build_from_category_list(record, category_list):
+    @classmethod
+    def build_from_category_list(cls, record, category_list):
         lines = record
         model = QueryModel()
 

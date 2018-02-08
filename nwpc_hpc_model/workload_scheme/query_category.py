@@ -16,14 +16,16 @@ class QueryCategory(object):
         self.display_name = display_name
         self.label = label
 
+        self.record_parser_class = record_parser_class
+        self.record_parser_arguments = record_parser_arguments
         self.record_parser = None
+
+        self.value_saver_class = value_saver_class
+        self.value_saver_arguments = value_saver_arguments
         self.value_saver = None
 
-        if record_parser_class is not None:
-            self.record_parser = record_parser_class(*record_parser_arguments)
-
-        if value_saver_class is not None:
-            self.value_saver = value_saver_class(*value_saver_arguments)
+        self.build_record_parser()
+        self.build_value_saver()
 
     def __deepcopy__(self, memodict={}):
         new_object = QueryCategory()
@@ -37,6 +39,14 @@ class QueryCategory(object):
 
         new_object.value_saver = self.value_saver
         return new_object
+
+    def build_record_parser(self):
+        if self.record_parser_class is not None:
+            self.record_parser = self.record_parser_class(*self.record_parser_arguments)
+
+    def build_value_saver(self):
+        if self.value_saver_class is not None:
+            self.value_saver = self.value_saver_class(*self.value_saver_arguments)
 
 
 class QueryCategoryList(list):
@@ -75,3 +85,4 @@ class QueryCategoryList(list):
             if a_category.label == label:
                 return a_category
         return None
+
