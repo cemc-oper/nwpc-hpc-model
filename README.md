@@ -3,14 +3,15 @@
 [![Build Status](https://travis-ci.org/perillaroc/nwpc-hpc-model.svg?branch=master)](https://travis-ci.org/perillaroc/nwpc-hpc-model)
 [![codecov](https://codecov.io/gh/perillaroc/nwpc-hpc-model/branch/master/graph/badge.svg)](https://codecov.io/gh/perillaroc/nwpc-hpc-model)
 
-A collection of models for HPC used in NWPC. Including model for:
+A collection of models for HPC used in NWPC. Including models for:
 
 * LoadLeveler's `llq -l` query
 * Slurm's `sinfo` query
 
 ## Installation
 
-Download source code from Github releases. Run `python setup.py install` to install.
+Download source code from Github releases or get the latest code from Github repo. 
+Run `python setup.py install` to install.
 
 ## Getting start
 
