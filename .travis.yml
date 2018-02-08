@@ -6,10 +6,8 @@ python:
 
 install:
   - pip install pytest codecov
-  - pip install .
 
 script:
-  - pytest
   - coverage run --source npwc_hpc_model -m py.test
   - coverage report
 
