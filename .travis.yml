@@ -5,11 +5,10 @@ python:
   - "nightly"
 
 install:
-  - pip install pytest codecov
+  - pip install pytest pytest-cov codecov
 
 script:
-  - coverage run --source npwc_hpc_model -m py.test
-  - coverage report
+  - pytest --cov=./
 
 after_success:
   - codecov
