@@ -18,6 +18,8 @@ class SlurmQueryModel(QueryModel):
             return None
 
         for line in lines:
+            if len(line) == 0:
+                continue
             item = QueryItem.build_from_category_list(line, category_list)
             model.items.append(item)
 

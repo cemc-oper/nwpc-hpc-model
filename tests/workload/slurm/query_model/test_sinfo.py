@@ -38,7 +38,7 @@ class TestSinfoQueryInfo(object):
             "../data/sinfo/default.txt"
         )
         with open(nwp_output) as nwp_output_file:
-            lines = nwp_output_file.readlines()
+            lines = nwp_output_file.read().split('\n')
             model = SlurmQueryModel.build_from_table_category_list(lines, category_list)
             model_dict = model.to_dict()
             assert(('items' in model_dict) is True)
