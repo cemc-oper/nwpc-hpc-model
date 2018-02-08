@@ -13,8 +13,8 @@ class QueryItem(object):
             result['props'].append(prop.to_dict())
         return result
 
-    @staticmethod
-    def build_from_category_list(record, category_list):
+    @classmethod
+    def build_from_category_list(cls, record, category_list):
         item = QueryItem()
 
         for a_category in category_list:
