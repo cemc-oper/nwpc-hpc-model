@@ -1,5 +1,7 @@
 # nwpc-hpc-model
 
+[![Build Status](https://travis-ci.org/perillaroc/nwpc-hpc-model.svg?branch=master)](https://travis-ci.org/perillaroc/nwpc-hpc-model)
+
 A collection of models for HPC used in NWPC. Including model for:
 
 * LoadLeveler's `llq -l` query
