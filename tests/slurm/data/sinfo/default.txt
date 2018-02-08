@@ -1,0 +1,13 @@
+PARTITION AVAIL  TIMELIMIT  NODES  STATE NODELIST
+serial       up   infinite     20   idle cmac[0011-0030]
+normal       up   infinite     26  drain cmac[0085-0086,0092,0109-0110,0707-0722,0775,0808,0961,1301,1369]
+normal       up   infinite    171  alloc cmac[0087-0088,0093-0100,0111-0238,0776-0807,1090]
+normal       up   infinite   1304   idle cmac[0035-0084,0089-0091,0101-0108,0239-0706,0723-0774,0809-0960,0962-0994,0996-1041,1044-1089,1091-1300,1302-1368,1370-1538]
+normal       up   infinite      3   down cmac[0995,1042-1043]
+operation    up   infinite     26  drain cmac[0085-0086,0092,0109-0110,0707-0722,0775,0808,0961,1301,1369]
+operation    up   infinite    171  alloc cmac[0087-0088,0093-0100,0111-0238,0776-0807,1090]
+operation    up   infinite   1304   idle cmac[0035-0084,0089-0091,0101-0108,0239-0706,0723-0774,0809-0960,0962-0994,0996-1041,1044-1089,1091-1300,1302-1368,1370-1538]
+operation    up   infinite      3   down cmac[0995,1042-1043]
+sgtest       up   infinite      5  drain cmac[0085-0086,0092,0109-0110]
+sgtest       up   infinite    138  alloc cmac[0087-0088,0093-0100,0111-0238]
+sgtest       up   infinite     83   idle cmac[0035-0084,0089-0091,0101-0108,0239-0260]
