@@ -6,10 +6,10 @@ python:
 
 install:
   - pip install pytest pytest-cov codecov
-  - python setup.py install
+  - pip install .
 
 script:
-  - pytest --cov=.
+  - pytest --cov nwpc_hpc_model tests
 
 after_success:
   - codecov
