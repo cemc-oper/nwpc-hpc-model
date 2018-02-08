@@ -14,7 +14,7 @@ Download source code from Github releases. Run `python setup.py install` to inst
 
 ## Getting start
 
-The following example use `nwpc-hpc-model` to extract job id and job owner from a `llq -l` query.
+The following example uses `nwpc-hpc-model` to extract job id and job owner from a `llq -l` query.
  
 A config json file is used to create query categories.
 
