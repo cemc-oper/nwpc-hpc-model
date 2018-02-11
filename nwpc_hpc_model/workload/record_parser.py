@@ -20,10 +20,14 @@ class TableRecordParser(RecordParser):
 
 
 class TokenRecordParser(RecordParser):
-    def __init__(self, index):
+    def __init__(self, index=-1, sep=None):
         RecordParser.__init__(self)
         self.index = index
+        self.sep = sep
 
     def parse(self, record):
-        tokens = record.split()
+        if self.sep is None:
+            tokens = record.split()
+        else:
+            tokens = record.split(self.sep)
         return tokens[self.index]

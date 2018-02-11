@@ -7,15 +7,18 @@ class SlurmQueryModel(QueryModel):
         QueryModel.__init__(self)
 
     @classmethod
-    def build_from_table_category_list(cls, record, category_list):
+    def build_from_table_category_list(cls, record, category_list, sep=None):
+        if len(record) == 0:
+            return None
+
         title_line = record[0]
-        category_list.update_index_for_table_query(title_line)
+        category_list.update_index_for_table_query(title_line, sep)
 
         lines = record[1:]
         model = SlurmQueryModel()
 
         if len(lines) == 0:
-            return None
+            return model
 
         for line in lines:
             if len(line) == 0:
