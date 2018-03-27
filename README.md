@@ -6,7 +6,7 @@
 A collection of models for HPC used in NWPC. Including models for:
 
 * LoadLeveler's `llq -l` query
-* Slurm's `sinfo` query
+* Slurm's `sinfo` and `squeue -o %all` query
 
 ## Installation
 
