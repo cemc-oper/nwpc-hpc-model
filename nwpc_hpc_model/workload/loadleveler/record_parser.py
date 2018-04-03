@@ -1,6 +1,6 @@
 # coding=utf-8
 import pathlib
-from nwpc_hpc_model.workload.record_parser import RecordParser, TableRecordParser
+from nwpc_hpc_model.workload.record_parser import *
 
 
 class DetailLabelParser(RecordParser):

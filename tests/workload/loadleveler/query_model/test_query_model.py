@@ -1,11 +1,10 @@
 # coding=utf-8
 
 import unittest
-from unittest import mock
 import os
-import importlib
 
-from nwpc_hpc_model.loadleveler import query_model, query_property, query_category, record_parser, value_saver
+from nwpc_hpc_model.workload.loadleveler import query_model, query_category, value_saver
+from nwpc_hpc_model.workload.loadleveler import record_parser
 
 
 class TestQueryModel(unittest.TestCase):

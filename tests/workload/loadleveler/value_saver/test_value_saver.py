@@ -1,11 +1,9 @@
 import unittest
-from unittest import mock
-import os
 import importlib
 import datetime
 
-from nwpc_hpc_model.loadleveler import value_saver
-from nwpc_hpc_model.loadleveler import QueryProperty
+from nwpc_hpc_model.workload.loadleveler import value_saver
+from nwpc_hpc_model.workload.loadleveler import QueryProperty
 
 
 class TestValueSaver(unittest.TestCase):

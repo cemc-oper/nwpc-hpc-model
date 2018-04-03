@@ -1,6 +1,5 @@
 # coding=utf-8
-from nwpc_hpc_model.workload import QueryModel
-from . import QueryItem
+from nwpc_hpc_model.workload import QueryModel, QueryItem
 
 
 class LoadLevelerQueryModel(QueryModel):

@@ -1,5 +1,5 @@
 # coding=utf-8
-from nwpc_hpc_model.loadleveler.filter import Filter
+from nwpc_hpc_model.workload.filter import Filter
 
 
 def test_filter():

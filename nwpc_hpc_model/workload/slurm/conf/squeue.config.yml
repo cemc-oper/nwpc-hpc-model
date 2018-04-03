@@ -1,0 +1,72 @@
+category_list:
+  -
+    id: "squeue.job_id"
+    display_name: "Job Id"
+    label: "JOBID"
+    record_parser_class: "TokenRecordParser"
+    record_parser_arguments:
+      - -1
+      - "|"
+    value_saver_class: "StringSaver"
+    value_saver_arguments: []
+  -
+    id: "squeue.account"
+    display_name: "Account"
+    label: "ACCOUNT"
+    record_parser_class: "TokenRecordParser"
+    record_parser_arguments:
+      - -1
+      - "|"
+    value_saver_class: "StringSaver"
+    value_saver_arguments: []
+  -
+    id: "squeue.partition"
+    display_name: "Partition"
+    label: "PARTITION"
+    record_parser_class: "TokenRecordParser"
+    record_parser_arguments:
+      - -1
+      - "|"
+    value_saver_class: "StringSaver"
+    value_saver_arguments: []
+  -
+    id: "squeue.command"
+    display_name: "Command"
+    label: "COMMAND"
+    record_parser_class: "TokenRecordParser"
+    record_parser_arguments:
+      - -1
+      - "|"
+    value_saver_class: "StringSaver"
+    value_saver_arguments: []
+  -
+    id: "squeue.state"
+    display_name: "State"
+    label: "STATE"
+    record_parser_class: "TokenRecordParser"
+    record_parser_arguments:
+      - -1
+      - "|"
+    value_saver_class: "StringSaver"
+    value_saver_arguments: []
+  -
+    id: "squeue.submit_time"
+    display_name: "Submit Time"
+    label: "SUBMIT_TIME"
+    record_parser_class: "TokenRecordParser"
+    record_parser_arguments:
+      - -1
+      - "|"
+    value_saver_class: "DateTimeSaver"
+    value_saver_arguments:
+      - "%Y-%m-%dT%H:%M:%S"
+  -
+    id: "squeue.work_dir"
+    display_name: "Work Dir"
+    label: "WORK_DIR"
+    record_parser_class: "TokenRecordParser"
+    record_parser_arguments:
+      - -1
+      - "|"
+    value_saver_class: "StringSaver"
+    value_saver_arguments: []

@@ -1,0 +1,37 @@
+category_list:
+  -
+    id: "sinfo.partition"
+    display_name: Partition
+    label: PARTITION
+    record_parser_class: TokenRecordParser
+    record_parser_arguments:
+      - -1
+    value_saver_class: StringSaver
+    value_saver_arguments: []
+  -
+    id: "sinfo.avail"
+    display_name: "Avail"
+    label: AVAIL
+    record_parser_class: TokenRecordParser
+    record_parser_arguments:
+      - -1
+    value_saver_class: StringSaver
+    value_saver_arguments: []
+  -
+    id: "sinfo.nodes"
+    display_name: "Nodes(A/I/O/T)"
+    label: "NODES(A/I/O/T)"
+    record_parser_class: TokenRecordParser
+    record_parser_arguments:
+      - -1
+    value_saver_class: StringSaver
+    value_saver_arguments: []
+  -
+    id: "sinfo.cpus"
+    display_name: "CPUs(A/I/O/T)"
+    label: "CPUS(A/I/O/T)"
+    record_parser_class: TokenRecordParser
+    record_parser_arguments:
+      - -1
+    value_saver_class: StringSaver
+    value_saver_arguments: []

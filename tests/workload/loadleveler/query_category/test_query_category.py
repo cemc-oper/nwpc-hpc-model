@@ -1,9 +1,8 @@
 import pytest
 import copy
 
-from nwpc_hpc_model.loadleveler import query_category
-from nwpc_hpc_model.loadleveler import record_parser
-from nwpc_hpc_model.loadleveler import value_saver
+from nwpc_hpc_model.workload.loadleveler import query_category, value_saver
+from nwpc_hpc_model.workload.loadleveler import record_parser
 
 
 class TestQueryCategory:
@@ -50,16 +49,16 @@ class TestQueryCategory:
         category_list.extend([
             query_category.QueryCategory("llq.id",          "Id",           "Job Step Id",
                                          record_parser.DetailLabelParser, ("Job Step Id",),
-                                         value_saver.StringSaver,    ()),
+                                         value_saver.StringSaver, ()),
             query_category.QueryCategory("llq.owner",       "Owner",        "Owner",
                                          record_parser.DetailLabelParser, ("Owner",),
-                                         value_saver.StringSaver,    ()),
+                                         value_saver.StringSaver, ()),
             query_category.QueryCategory("llq.class",       "Class",        "Class",
                                          record_parser.DetailLabelParser, ("Class",),
-                                         value_saver.StringSaver,    ()),
+                                         value_saver.StringSaver, ()),
             query_category.QueryCategory("llq.job_script",  "Job Script",   "Cmd",
                                          record_parser.DetailLabelParser, ("Cmd",),
-                                         value_saver.StringSaver,    ()),
+                                         value_saver.StringSaver, ()),
             query_category.QueryCategory("llq.status",      "Status",       "Status",
                                          record_parser.DetailLabelParser, ("Status",),
                                          value_saver.JobStatusSaver, ())

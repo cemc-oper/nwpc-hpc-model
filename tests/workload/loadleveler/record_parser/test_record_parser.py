@@ -1,11 +1,10 @@
 # coding=utf-8
 import unittest
-from unittest import mock
 import os
 import importlib
 import copy
 
-from nwpc_hpc_model.loadleveler import record_parser
+from nwpc_hpc_model.workload.loadleveler import record_parser
 
 
 class TestRecordParser(unittest.TestCase):
