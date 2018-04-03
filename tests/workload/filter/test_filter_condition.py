@@ -9,7 +9,7 @@ from nwpc_hpc_model.workload.filter_condition import \
     create_in_value_checker, \
     create_value_in_checker
 
-from nwpc_hpc_model.workload.loadleveler import QueryItem, QueryProperty
+from nwpc_hpc_model.workload import QueryItem, QueryProperty
 
 
 def create_job_item_dict(
