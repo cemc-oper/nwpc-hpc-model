@@ -132,30 +132,6 @@ def create_job_item(
     return job_item
 
 
-def test_get_property_data():
-    job_item = create_job_item_dict(
-        job_id="id",
-        owner="nwp_xp",
-        job_class="serial",
-        queue_date=datetime.datetime.now(),
-        priority=50,
-        job_script="/cma/g3/test.ksh"
-    )
-
-    assert get_property_data(job_item, "llq.job_script") == "/cma/g3/test.ksh"
-
-    job_item = create_job_item(
-        job_id="id",
-        owner="nwp_xp",
-        job_class="serial",
-        queue_date=datetime.datetime.now(),
-        priority=50,
-        job_script="/cma/g3/test.ksh"
-    )
-
-    assert get_property_data(job_item, "llq.job_script") == "/cma/g3/test.ksh"
-
-
 def test_condition():
     condition = FilterCondition()
     job_item = dict()

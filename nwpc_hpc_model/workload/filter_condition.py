@@ -1,33 +1,13 @@
 # coding: utf-8
+from nwpc_hpc_model.workload.query_item import get_property_data
+
+
 class FilterCondition(object):
     def __init__(self):
         pass
 
     def is_fit(self, job_item):
         return True
-
-
-def get_property_data(job_item, property_id):
-    """
-    get property data from a job item
-    :param job_item: QueryItem or a QueryItem dict.
-    :param property_id: property_id
-    :return: property data
-    """
-    result = None
-    if isinstance(job_item, dict):
-        props = job_item['props']
-        for a_prop in props:
-            if a_prop['id'] == property_id:
-                result = a_prop['data']
-                return result
-    else:
-        props = job_item.props
-        for a_prop in props:
-            if a_prop.map['id'] == property_id:
-                result = a_prop.map['data']
-                return result
-    return result
 
 
 class PropertyFilterCondition(FilterCondition):
