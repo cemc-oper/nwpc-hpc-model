@@ -1,0 +1,4 @@
+cur_uid(1021308)        gid(10213)
+dir             Size(GB)        Used(GB)        Avail(GB)       Use%        Type
+/g1             5.00            0.17            4.83            3.33      QUOTATYPE_FSUSER
+/g3             5000.00         21.51           4978.49         0.43      QUOTATYPE_FSUSER
