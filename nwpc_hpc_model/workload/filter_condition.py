@@ -1,5 +1,5 @@
 # coding: utf-8
-from nwpc_hpc_model.workload.query_item import get_property_data
+from nwpc_hpc_model.base.query_item import get_property_data
 
 
 class FilterCondition(object):

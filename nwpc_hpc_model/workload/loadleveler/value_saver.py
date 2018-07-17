@@ -1,6 +1,6 @@
 # coding=utf-8
 import datetime
-from nwpc_hpc_model.workload.value_saver import *
+from nwpc_hpc_model.base.value_saver import *
 
 
 class FullDateSaver(ValueSaver):

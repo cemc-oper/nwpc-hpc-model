@@ -1,5 +1,5 @@
 # coding: utf-8
-from nwpc_hpc_model.workload import QueryCategoryList
+from nwpc_hpc_model.base.query_category import QueryCategoryList
 
 
 class SlurmQueryCategoryList(QueryCategoryList):
