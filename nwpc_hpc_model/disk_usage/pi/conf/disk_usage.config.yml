@@ -1,0 +1,56 @@
+category_list:
+  -
+    id: "disk_usage.dir"
+    display_name: Direcotry
+    label: dir
+    record_parser_class: TokenRecordParser
+    record_parser_arguments:
+      - 0
+    value_saver_class: StringSaver
+    value_saver_arguments: []
+  -
+    id: "disk_usage.total_size"
+    display_name: "Size"
+    label: Size(GB)
+    record_parser_class: TokenRecordParser
+    record_parser_arguments:
+      - 1
+    value_saver_class: NumberSaver
+    value_saver_arguments: []
+  -
+    id: "disk_usage.used_size"
+    display_name: "Used"
+    label: "Used(GB)"
+    record_parser_class: TokenRecordParser
+    record_parser_arguments:
+      - 2
+    value_saver_class: NumberSaver
+    value_saver_arguments: []
+  -
+    id: "disk_usage.avail_size"
+    display_name: "Avail"
+    label: "Avail(GB)"
+    record_parser_class: TokenRecordParser
+    record_parser_arguments:
+      - 3
+    value_saver_class: NumberSaver
+    value_saver_arguments: []
+  -
+    id: "disk_usage.used_percent"
+    display_name: "Used Percent"
+    label: "Use%"
+    record_parser_class: TokenRecordParser
+    record_parser_arguments:
+      - 4
+    value_saver_class: NumberSaver
+    value_saver_arguments: []
+  -
+    id: "disk_usage.type"
+    display_name: "Type"
+    label: "Type"
+    record_parser_class: TokenRecordParser
+    record_parser_arguments:
+      - 5
+    value_saver_class: StringSaver
+    value_saver_arguments: []
+

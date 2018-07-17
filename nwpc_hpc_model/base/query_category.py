@@ -86,4 +86,3 @@ class QueryCategoryList(list):
             if a_category.label == label:
                 return a_category
         return None
-

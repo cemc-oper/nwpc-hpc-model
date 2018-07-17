@@ -26,7 +26,7 @@ class TestValueSaver(unittest.TestCase):
 
         self.assertEqual(item.map['text'], text)
         self.assertEqual(item.map['data'], data)
-        print("Test passed:", name)
+        # print("Test passed:", name)
 
     def test_string(self):
         test_method = self.check_string
@@ -67,7 +67,7 @@ class TestValueSaver(unittest.TestCase):
 
         self.assertEqual(item.map['text'], text)
         self.assertEqual(item.map['data'], data)
-        print("Test passed:", name)
+        # print("Test passed:", name)
 
     def test_number(self):
         test_method = self.check_number
@@ -96,7 +96,7 @@ class TestValueSaver(unittest.TestCase):
 
         self.assertEqual(item.map['text'], text)
         self.assertEqual(item.map['data'], data)
-        print("Test passed:", name)
+        # print("Test passed:", name)
 
     def test_full_date(self):
         test_method = self.check_full_date
@@ -132,7 +132,7 @@ class TestValueSaver(unittest.TestCase):
         self.assertEqual(item.map['value'], value)
         self.assertEqual(item.map['text'], text)
         self.assertEqual(item.map['data'], data)
-        print("Test passed:", name)
+        # print("Test passed:", name)
 
     def test_job_state(self):
         test_method = self.check_job_state

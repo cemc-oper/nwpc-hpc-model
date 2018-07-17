@@ -36,7 +36,10 @@ setup(
     install_requires=[],
 
     extras_require={
-        'test': ['pytest'],
+        'test': [
+            'pyyaml',
+            'pytest'
+        ],
     },
 
     entry_points={}

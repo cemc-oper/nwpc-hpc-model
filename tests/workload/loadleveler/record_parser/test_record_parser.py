@@ -29,7 +29,7 @@ class TestRecordParser(unittest.TestCase):
         parser = record_parser.DetailLabelParser(label)
         parser_value = parser.parse(lines)
         self.assertEqual(parser_value, value)
-        print("Test passed:", name)
+        # print("Test passed:", name)
 
     def test_llq_detail_query_record_parser(self):
         serial_job_running_file_path = os.path.join(
@@ -83,7 +83,7 @@ class TestRecordParser(unittest.TestCase):
         parser = record_parser.LlqJobScriptParser()
         parser_value = parser.parse(lines)
         self.assertEqual(parser_value, value)
-        print("Test passed:", name)
+        # print("Test passed:", name)
 
     def test_llq_script_record_parser(self):
         check_method = self.check_llq_script_record_parser
@@ -128,7 +128,7 @@ class TestRecordParser(unittest.TestCase):
         parser = record_parser.LlqFilePathParser(label)
         parser_value = parser.parse(lines)
         self.assertEqual(parser_value, value)
-        print("Test passed:", name)
+        # print("Test passed:", name)
 
     def test_llq_file_path_record_parser(self):
         check_method = self.check_llq_file_path_record_parser
@@ -190,7 +190,7 @@ class TestRecordParser(unittest.TestCase):
         parser = record_parser.TableRecordParser(begin_pos, end_pos)
         parser_value = parser.parse(line)
         self.assertEqual(parser_value, value)
-        print("Test passed:", name)
+        # print("Test passed:", name)
 
     def test_table_record_parser(self):
         check_method = self.check_table_record_parser
