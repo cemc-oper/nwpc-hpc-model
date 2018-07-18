@@ -1,0 +1,118 @@
+category_list:
+  -
+    id: "disk_usage.file_system"
+    display_name: Filesystem
+    label: Filesystem
+    record_parser_class: RegexGroupParser
+    record_parser_arguments:
+      - 1
+    value_saver_class: StringSaver
+    value_saver_arguments: []
+  -
+    id: "disk_usage.quota_type"
+    display_name: "type"
+    label: type
+    record_parser_class: RegexGroupParser
+    record_parser_arguments:
+      - 2
+    value_saver_class: StringSaver
+    value_saver_arguments: []
+  -
+    id: "disk_usage.block_limits.current"
+    display_name: "block limits current"
+    label: KB
+    record_parser_class: RegexGroupParser
+    record_parser_arguments:
+      - 3
+    value_saver_class: NumberSaver
+    value_saver_arguments: []
+  -
+    id: "disk_usage.block_limits.quota"
+    display_name: "block limits quota"
+    label: quota
+    record_parser_class: RegexGroupParser
+    record_parser_arguments:
+      - 4
+    value_saver_class: NumberSaver
+    value_saver_arguments: []
+  -
+    id: "disk_usage.block_limits.limit"
+    display_name: "block limits limit"
+    label: limit
+    record_parser_class: RegexGroupParser
+    record_parser_arguments:
+      - 5
+    value_saver_class: NumberSaver
+    value_saver_arguments: []
+  -
+    id: "disk_usage.block_limits.in_doubt"
+    display_name: "block limits in_doubt"
+    label: in_doubt
+    record_parser_class: RegexGroupParser
+    record_parser_arguments:
+      - 6
+    value_saver_class: NumberSaver
+    value_saver_arguments: []
+  -
+    id: "disk_usage.block_limits.grace"
+    display_name: "block limits grace"
+    label: grace
+    record_parser_class: RegexGroupParser
+    record_parser_arguments:
+      - 7
+    value_saver_class: StringSaver
+    value_saver_arguments: []
+  -
+    id: "disk_usage.file_limits.files"
+    display_name: "file limits files"
+    label: files
+    record_parser_class: RegexGroupParser
+    record_parser_arguments:
+      - 8
+    value_saver_class: NumberSaver
+    value_saver_arguments: []
+  -
+    id: "disk_usage.file_limits.quota"
+    display_name: "file limits quota"
+    label: quota
+    record_parser_class: RegexGroupParser
+    record_parser_arguments:
+      - 9
+    value_saver_class: NumberSaver
+    value_saver_arguments: []
+  -
+    id: "disk_usage.file_limits.limit"
+    display_name: "file limits limit"
+    label: limit
+    record_parser_class: RegexGroupParser
+    record_parser_arguments:
+      - 10
+    value_saver_class: NumberSaver
+    value_saver_arguments: []
+  -
+    id: "disk_usage.file_limits.in_doubt"
+    display_name: "file limits in_doubt"
+    label: in_doubt
+    record_parser_class: RegexGroupParser
+    record_parser_arguments:
+      - 11
+    value_saver_class: NumberSaver
+    value_saver_arguments: []
+  -
+    id: "disk_usage.file_limits.grace"
+    display_name: "file limits grace"
+    label: grace
+    record_parser_class: RegexGroupParser
+    record_parser_arguments:
+      - 12
+    value_saver_class: StringSaver
+    value_saver_arguments: []
+  -
+    id: "disk_usage.file_limits.remarks"
+    display_name: "file limits remarks"
+    label: remarks
+    record_parser_class: RegexGroupParser
+    record_parser_arguments:
+      - 13
+    value_saver_class: StringSaver
+    value_saver_arguments: []
