@@ -1,0 +1,18 @@
+Filesystem                             1M-blocks       Used  Available Use% Mounted on
+/dev/sda3                                  50269      40332       7362  85% /
+devtmpfs                                  192685          0     192685   0% /dev
+/dev/sda1                                    477        206        243  46% /boot
+/dev/sda6                                   9952       3437       5987  37% /var
+/dev/sda5                                   9952         42       9383   1% /tmp
+/dev/sda8                                  20798      10490       9230  54% /p300log
+/dev/sda2                                  64380       1364      59724   3% /scratch
+nodev_parastor_188.1.133.61-2_fs_ssd   563712000   78205224  485506777  14% /g0
+nodev_parastor_188.1.133.61-3_fs_sas1 1540096000  610587889  929508112  40% /g1
+nodev_parastor_188.1.133.61-4_fs_sas2 1796096000  197336527 1598759474  11% /g2
+nodev_parastor_188.1.133.61-5_fs_sas3 1796096000  661237939 1134858062  37% /g3
+nodev_parastor_188.1.133.61-6_fs_sas4 1796096000  128921879 1667174122   8% /g4
+nodev_parastor_188.1.233.61-2_fs_sas5 1796096000   87873318 1708222683   5% /g5
+nodev_parastor_188.1.233.61-3_fs_sas6 1796096000  448027442 1348068559  25% /g6
+nodev_parastor_188.1.233.61-4_fs_sas7 1796096000  242611394 1553484607  14% /g7
+nodev_parastor_188.1.233.61-5_fs_sas8 1796096000 1218699838  577396163  68% /g8
+nodev_parastor_188.1.233.61-6_fs_sas9 1796096000 1108725978  687370023  62% /g9

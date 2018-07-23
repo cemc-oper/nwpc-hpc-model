@@ -1,0 +1,56 @@
+category_list:
+  -
+    id: "disk_space.file_system"
+    display_name: Filesystem
+    label: Filesystem
+    record_parser_class: RegexGroupParser
+    record_parser_arguments:
+      - 1
+    value_saver_class: StringSaver
+    value_saver_arguments: []
+  -
+    id: "disk_space.blocks.total_size_mb"
+    display_name: "Total size (MB)"
+    label: "1M-Blocks"
+    record_parser_class: RegexGroupParser
+    record_parser_arguments:
+      - 2
+    value_saver_class: NumberSaver
+    value_saver_arguments: []
+  -
+    id: "disk_space.blocks.used_size_mb"
+    display_name: "Used size (MB)"
+    label: "Used"
+    record_parser_class: RegexGroupParser
+    record_parser_arguments:
+      - 3
+    value_saver_class: NumberSaver
+    value_saver_arguments: []
+  -
+    id: "disk_space.blocks.available_size_mb"
+    display_name: "Available size (MB)"
+    label: "Available"
+    record_parser_class: RegexGroupParser
+    record_parser_arguments:
+      - 4
+    value_saver_class: NumberSaver
+    value_saver_arguments: []
+  -
+    id: "disk_space.blocks.used_percent"
+    display_name: "Used percent"
+    label: "Use%"
+    record_parser_class: RegexGroupParser
+    record_parser_arguments:
+      - 5
+    value_saver_class: StringSaver
+    value_saver_arguments: []
+  -
+    id: "disk_space.mounted_on"
+    display_name: "Mounted on"
+    label: "Mounted on"
+    record_parser_class: RegexGroupParser
+    record_parser_arguments:
+      - 6
+    value_saver_class: StringSaver
+    value_saver_arguments: []
+

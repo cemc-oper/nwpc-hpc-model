@@ -31,3 +31,12 @@ class TokenRecordParser(RecordParser):
         else:
             tokens = record.split(self.sep)
         return tokens[self.index]
+
+
+class RegexGroupParser(RecordParser):
+    def __init__(self, group_index):
+        RecordParser.__init__(self)
+        self.group_index = group_index
+
+    def parse(self, record):
+        return record.group(self.group_index)

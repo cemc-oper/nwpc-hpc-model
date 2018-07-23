@@ -31,7 +31,9 @@ setup(
 
     keywords='nwpc hpc model',
 
-    packages=find_packages(exclude=['contrib', 'docs', 'tests']),
+    packages=find_packages(exclude=[
+        'contrib', 'docs', 'tests', 'docker'
+    ]),
 
     install_requires=[],
 
