@@ -26,7 +26,8 @@ setup(
         'Development Status :: 2 - Pre-Alpha',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: MIT License',
-        'Programming Language :: Python :: 3.6'
+        'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.7'
     ],
 
     keywords='nwpc hpc model',
@@ -40,8 +41,14 @@ setup(
     extras_require={
         'test': [
             'pyyaml',
-            'pytest'
+            'pytest',
+            'pytest-cov',
+            'codecov'
         ],
+        'cov': [
+            'pytest-cov',
+            'codecov'
+        ]
     },
 
     entry_points={}

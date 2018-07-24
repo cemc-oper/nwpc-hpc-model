@@ -7,54 +7,54 @@ A collection of models for HPC used in NWPC. Including models for:
 
 * LoadLeveler's `llq -l` query
 * Slurm's `sinfo` and `squeue -o %all` query
+* Disk usage and disk space query
 
 ## Installation
 
 Download source code from Github releases or get the latest code from Github repo. 
-Run `python setup.py install` to install.
+Run `pip install .` to install.
 
 ## Getting start
 
 The following example uses `nwpc-hpc-model` to extract job id and job owner from a `llq -l` query.
  
-A config json file is used to create query categories.
+A config YAML file is used to create query categories.
 
-```json
-[
-    {
-      "id": "llq.id",
-      "display_name": "Id",
-      "label": "Job Step Id",
-      "record_parser_class": "DetailLabelParser",
-      "record_parser_arguments": ["Job Step Id"],
-      "value_saver_class": "StringSaver",
-      "value_saver_arguments": []
-    },
-    {
-      "id": "llq.owner",
-      "display_name": "Owner",
-      "label": "Owner",
-      "record_parser_class": "DetailLabelParser",
-      "record_parser_arguments": ["Owner"],
-      "value_saver_class": "StringSaver",
-      "value_saver_arguments": []
-    }
- ]
+```yaml
+category_list:
+  -
+    id: "llq.id"
+    display_name: "Id"
+    label: "Job Step Id"
+    record_parser_class: "DetailLabelParser"
+    record_parser_arguments:
+      - "Job Step Id"
+    value_saver_class: "StringSaver"
+    value_saver_arguments: []
+  -
+    id: "llq.owner"
+    display_name: "Owner"
+    label: "Owner"
+    record_parser_class: "DetailLabelParser"
+    record_parser_arguments:
+      - "Owner"
+    value_saver_class: "StringSaver"
+    value_saver_arguments: []
 
 ```
 
 First create `QueryCategoryList` according to the config json file.
 
 ```python
-from nwpc_hpc_model.loadleveler import QueryCategoryList, \
+from nwpc_hpc_model.workload.loadleveler import QueryCategoryList, \
     QueryCategory, record_parser, value_saver
-import json
+import yaml
 
 with open('config_file_path', 'r') as f:
-    config = json.load(f)
+    config = yaml.load(f)
     
 category_list = QueryCategoryList()
-for an_item in config:
+for an_item in config['category_list']:
     category = QueryCategory(
         category_id=an_item['id'],
         display_name=an_item['display_name'],
@@ -82,7 +82,7 @@ output_lines = output_string.split("\n")
 Build `QueryModel` from `QueryCategoryList`
 
 ```python
-from nwpc_hpc_model.loadleveler import LoadLevelerQueryModel
+from nwpc_hpc_model.workload.loadleveler import LoadLevelerQueryModel
 
 model = LoadLevelerQueryModel.build_from_category_list(output_lines, category_list)
 ```
