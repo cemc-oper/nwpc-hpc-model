@@ -95,6 +95,6 @@ Use `pytest` to run all tests.
 
 ## License
 
-Copyright &copy; 2016-2018, Perilla Roc.
+Copyright &copy; 2016-2019, Perilla Roc.
 
 `nwpc-hpc-model` is licensed under [The MIT License](https://opensource.org/licenses/MIT).
