@@ -40,3 +40,12 @@ class RegexGroupParser(RecordParser):
 
     def parse(self, record):
         return record.group(self.group_index)
+
+
+class DictRecordParser(RecordParser):
+    def __init__(self, key):
+        RecordParser.__init__(self)
+        self.key = key
+
+    def parse(self, record):
+        return record[self.key]
