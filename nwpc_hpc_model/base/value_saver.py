@@ -42,3 +42,15 @@ class DateTimeSaver(ValueSaver):
         item.map['text'] = data.strftime("%Y-%m-%d %H:%M:%S")
         item.map['value'] = value
         item.map['data'] = data
+
+
+class TimestampSaver(ValueSaver):
+    def __init__(self):
+        ValueSaver.__init__(self)
+
+    def set_item_value(self, item, value):
+        data = datetime.datetime.utcfromtimestamp(int(value))
+
+        item.map['text'] = data.strftime("%Y-%m-%d %H:%M:%S")
+        item.map['value'] = value
+        item.map['data'] = data
